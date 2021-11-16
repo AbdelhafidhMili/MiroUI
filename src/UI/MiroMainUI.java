@@ -7,6 +7,9 @@ import javax.swing.JButton;
 import java.awt.BorderLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.SwingConstants;
+import javax.swing.JEditorPane;
+import javax.swing.JPanel;
 
 public class MiroMainUI {
 
@@ -43,12 +46,19 @@ public class MiroMainUI {
 		frame.setBounds(100, 100, 522, 372);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		JButton btnNewButton = new JButton("New button");
+		JButton btnNewButton = new JButton("Connect");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		frame.getContentPane().add(btnNewButton, BorderLayout.NORTH);
+		frame.getContentPane().add(btnNewButton, BorderLayout.WEST);
+		
+		JEditorPane editorPane = new JEditorPane();
+		frame.getContentPane().add(editorPane, BorderLayout.SOUTH);
+		
+		JButton btnNewButton_1 = new JButton("New button");
+		btnNewButton_1.setHorizontalAlignment(SwingConstants.LEFT);
+		frame.getContentPane().add(btnNewButton_1, BorderLayout.NORTH);
 	}
 
 }
